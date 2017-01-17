@@ -12,7 +12,7 @@ To use our delivery time calculator micro service, you need to clone the reposit
 ######Information
 1. In the **APIService** class you find the calcTime() method, which takes two arguments, which are used to calculate the delivery time and work with Google API.
 2. The 2 arguments are defined in the **APIController**
-    * **ORIGIN** -> change this to set the base location (where your store is)
+    * **origin** -> change this to set the base location (where your store is)
     * **destination** -> change this to set the destination (where to send the delivery)
 3. If everything works out :thumbsup:, the result is in a JSON Object, the "time" key holds the value in milliseconds and
   the "status" key holds a string.
@@ -20,7 +20,7 @@ To use our delivery time calculator micro service, you need to clone the reposit
 ######Running
 1. Run and compile the TimeGeneratorService *(default port: 60003)*. After that you can choose between two options.
 
-  2.a Open the following link: http://0.0.0.0:60003/api/timecalculator/[TARGET_LOCATION]
+  2.a Open the following link: http://0.0.0.0:60003/api/timecalculator/[ORIGIN_LOCATION]/[TARGET_LOCATION]
 
   2.b Write a main method. For example:
 
@@ -29,7 +29,7 @@ To use our delivery time calculator micro service, you need to clone the reposit
       public static void main(String[] args) {
           try {
               APIController apiController = new APIController(APIService.getInstance());
-              System.out.println(apiController.getTimeInMs("[TARGET_LOCATION]"));
+              System.out.println(apiController.getTimeInMs("[ORIGIN_LOCATION]", "[TARGET_LOCATION]"));
           } catch (IOException|URISyntaxException|JSONException e) {
               e.printStackTrace();
           }

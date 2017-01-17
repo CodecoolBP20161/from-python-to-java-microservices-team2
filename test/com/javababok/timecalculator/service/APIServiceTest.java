@@ -28,11 +28,11 @@ public class APIServiceTest {
                 "            {\n" +
                 "               \"distance\" : {\n" +
                 "                  \"text\" : \"873 km\",\n" +
-                "                  \"value\" : 873295\n" +
+                "                  \"value\" : 873283\n" +
                 "               },\n" +
                 "               \"duration\" : {\n" +
                 "                  \"text\" : \"8 hours 30 mins\",\n" +
-                "                  \"value\" : 30623\n" +
+                "                  \"value\" : 30573\n" +
                 "               },\n" +
                 "               \"status\" : \"OK\"\n" +
                 "            }\n" +
